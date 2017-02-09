@@ -5,6 +5,9 @@ image_resource:
   source:
     repository: busybox
     
+inputs:
+- name: pipeline
+
 run:
   path: cat
   args:
