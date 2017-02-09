@@ -1,0 +1,14 @@
+---
+resources:
+- name: pipeline
+  type: git
+  source:
+    uri: "git@github.com:maliksalman/concourse-playground.git"
+    branch: concourse
+
+jobs:
+  - name: build
+    plan:
+    - get: pipeline
+    - task: build-code
+      file: pipeline/ci/build-task.yml
