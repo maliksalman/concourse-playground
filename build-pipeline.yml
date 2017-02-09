@@ -3,7 +3,7 @@ resources:
 - name: pipeline
   type: git
   source:
-    uri: "git@github.com:maliksalman/concourse-playground.git"
+    uri: https://github.com/maliksalman/concourse-playground.git
     branch: concourse
 
 jobs:
