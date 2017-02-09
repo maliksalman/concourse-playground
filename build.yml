@@ -1,0 +1,6 @@
+---
+jobs:
+  job:
+    name: build
+    plan:
+    - task: hello-world
