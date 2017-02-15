@@ -1,13 +1,15 @@
 ---
 platform: linux
+
 image_resource:
   type: docker-image
   source:
     repository: busybox
+    tag: latest
     
 inputs:
 - name: pipeline
 - name: ftp-api
 
 run:
-  path: pipeline/build-task.sh
+  path: pipeline/ci/build-task.sh
