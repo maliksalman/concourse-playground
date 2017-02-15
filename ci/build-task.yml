@@ -5,8 +5,7 @@ image_resource:
   type: docker-image
   source:
     repository: $DOCKER_IMAGE
-    tag: latess
-    
+
 inputs:
 - name: pipeline
 - name: ftp-api
