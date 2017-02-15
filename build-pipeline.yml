@@ -25,3 +25,5 @@ jobs:
     - get: ftp-api
     - task: build-code
       file: pipeline/ci/build-task.yml
+      params:
+        DOCKER_IMAGE: ubuntu

@@ -4,12 +4,13 @@ platform: linux
 image_resource:
   type: docker-image
   source:
-    repository: ubuntu
-    tag: latest
+    repository: {{DOCKER_IMAGE}}
+    tag: latess
     
 inputs:
 - name: pipeline
 - name: ftp-api
 
 run:
-  path: pipeline/ci/build-task.sh
+  path: bash
+  args: [ pipeline/ci/build-task.sh ]
