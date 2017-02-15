@@ -15,7 +15,7 @@ resources:
 - name: ftp-api
   type: ftp
   source:
-    uri: ftp://bob:bob@1192.168.11.100/dev
+    uri: ftp://bob:bob@192.168.11.100/dev
     regex: (?P<file>carshare-api-(?P<version>.*).tar.gz)
 
 jobs:
