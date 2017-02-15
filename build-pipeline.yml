@@ -1,4 +1,10 @@
 ---
+resource_types:
+- name: ftp
+  type: docker-image
+  source:
+    repository: aequitas/ftp-resource
+
 resources:
 - name: pipeline
   type: git
@@ -6,9 +12,16 @@ resources:
     uri: https://github.com/maliksalman/concourse-playground.git
     branch: concourse
 
+- name: ftp-api
+  type: ftp
+  source:
+    uri: ftp://bob:bob@1192.168.11.100/dev
+    regex: (?P<file>carshare-api-(?P<version>.*).tar.gz)
+
 jobs:
   - name: build
     plan:
     - get: pipeline
+    - get: ftp-api
     - task: build-code
       file: pipeline/ci/build-task.yml

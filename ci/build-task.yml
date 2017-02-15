@@ -7,8 +7,7 @@ image_resource:
     
 inputs:
 - name: pipeline
+- name: ftp-api
 
 run:
-  path: cat
-  args:
-  - pipeline/build-pipeline.yml
+  path: pipeline/build-task.sh
